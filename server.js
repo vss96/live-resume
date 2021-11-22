@@ -11,10 +11,10 @@ const express = require('express');
 const app = express();
 
 app.use(requireHTTPS);
-app.use(express.static('./dist/vss-resume'));
+app.use(express.static('./dist/live-resume'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', { root: 'dist/vss-resume/' }),
+    res.sendFile('index.html', { root: 'dist/live-resume/' }),
 );
 
 app.listen(process.env.PORT || 8080);
